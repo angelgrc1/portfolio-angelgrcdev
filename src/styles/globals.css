@@ -40,3 +40,81 @@ a {
   margin: 0 auto;
   width: 90%;
 }
+
+/* Scroller Animation */
+
+.scroller {
+  max-width: 1300px;
+}
+
+.scroller__inner {
+  padding-block: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.scroller[data-animated='true'] {
+  overflow: hidden;
+  -webkit-mask: linear-gradient(
+    90deg,
+    transparent,
+    white 20%,
+    white 80%,
+    transparent
+  );
+  mask: linear-gradient(90deg, transparent, white 20%, white 80%, transparent);
+}
+
+.scroller[data-animated='true'] .scroller__inner {
+  width: max-content;
+  flex-wrap: nowrap;
+  animation: scroll var(--_animation-duration, 40s)
+    var(--_animation-direction, forwards) linear infinite;
+}
+
+.scroller[data-direction='right'] {
+  --_animation-direction: reverse;
+}
+
+.scroller[data-direction='left'] {
+  --_animation-direction: forwards;
+}
+
+.scroller[data-speed='fast'] {
+  --_animation-duration: 20s;
+}
+
+.scroller[data-speed='slow'] {
+  --_animation-duration: 90s;
+}
+
+@keyframes scroll {
+  to {
+    transform: translate(calc(-50% - 0.5rem));
+  }
+}
+
+.tag-list {
+  margin: 0;
+  padding-inline: 0;
+  list-style: none;
+}
+
+.tag-list li {
+  padding: 10px 30px;
+  color: white;
+  box-shadow: 0 0 5px 0px #0eff9b;
+  border-radius: 0.5rem;
+  border: 1px solid #0eff9b;
+}
+
+.bg-experience-mesh {
+  background-color: hsla(155, 100%, 52%, 1);
+  background-image: radial-gradient(
+      at 60% 71%,
+      hsla(0, 0%, 50%, 1) 0px,
+      transparent 50%
+    ),
+    radial-gradient(at 64% 47%, hsla(207, 0%, 100%, 1) 0px, transparent 50%);
+}

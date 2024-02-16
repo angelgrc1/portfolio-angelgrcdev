@@ -10,7 +10,7 @@ export const Main: React.FC<Props> = ({ children }) => {
     <React.Fragment>
       <Header />
       <main className="flex flex-col w-full min-h-[calc(100vh-200px)]">{children}</main>
-      {/* <Footer /> */}
+      <Footer />
     </React.Fragment>
   );
 };

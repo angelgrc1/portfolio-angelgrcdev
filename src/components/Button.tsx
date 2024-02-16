@@ -15,7 +15,7 @@ export const Button: React.FC<Props> = ({
 }) => {
   return (
     <button
-      className={`bg-white text-black font-medium py-2 px-4 rounded ${className} shadow-retro transition-transform duration-200 hover:scale-105`}
+      className={`bg-white text-black font-bold py-2 px-4 rounded ${className} shadow-retro transition-transform duration-200 hover:scale-105`}
       onClick={onClick}
       type={type}
     >

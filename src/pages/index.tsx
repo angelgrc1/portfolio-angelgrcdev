@@ -1,6 +1,6 @@
-import { Header, Footer, Hero, Experience } from "@/components";
-import { Main } from "@/layouts/Main";
-import Head from "next/head";
+import { Header, Footer, Hero, Experience, Knowledge, About } from '@/components'
+import { Main } from '@/layouts/Main'
+import Head from 'next/head'
 
 export default function Home() {
   return (
@@ -12,9 +12,11 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Main>
-        <Hero/>
+        <Hero />
+        <About />
+        <Knowledge />
         <Experience />
       </Main>
     </>
-  );
+  )
 }
